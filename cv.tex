@@ -1,0 +1,182 @@
+\documentclass[a4paper, 10pt]{article}
+
+\usepackage[hidelinks, pageanchor=false]{hyperref}
+\usepackage[top=1cm, bottom=1cm, left=1cm, right=1cm]{geometry}
+\usepackage{enumitem}
+\usepackage{adjustbox}
+
+\begin{document}
+
+\input style.tex
+\input personalInfos.tex
+
+%Beggining of CV
+
+\begin {identity}
+    \name {\personalFirstName}{\personalLastName}
+    \contact {\personalAddress \linebreak
+    \personalPhoneNumber, \href{mailto:\personalMail}{\personalMail}\linebreak
+    Nationality: French\linebreak
+    Github: \url{https://github.com/grassead}}
+\end {identity}
+
+\title {Embedded software engineer (Android/Linux/QNX)}
+
+\begin{section} {Work experience}
+    \begin{experience}{May 2015}{Present}{Embedded virtualization engineer}{RedBend}{Saint-Quentin-en-Yvelines}{France}
+	\begin{subexperience}
+	    \begin{itemize}[parsep=0cm,itemsep=0cm,topsep=0cm]
+		\item \textbf {Graphics team:}
+		\begin{itemize}[parsep=0cm,itemsep=0cm,topsep=0cm]
+		    \item Debugging in both user and kernel space;
+		    \item Conception of the new virtualized powerHAL for Android 5.1;
+		    \item Studying how to handle GPU and display hardware of an Intel processor into two different virtual machines (One under QNX 6.5, the other one under Linux (AGL)):
+		    \begin{itemize}[parsep=0cm,itemsep=0cm,topsep=0cm]
+			\item Creation of a Linux distribution from scratch using Build Root to start the project;
+			\item Integratration of Intel Linux distribution using Yocto;
+			\item Studying Linux kernel drivers and documentation to understand the Intel Gen 9 Graphics technology;
+			\item Modification of Intel's Linux Kernel drivers;
+		    \end{itemize}
+		    \item Participating on porting the graphics virtualization solution from Android to QNX 7.0:
+		    \begin{itemize}[parsep=0cm,itemsep=0cm,topsep=0cm]
+			\item Studying the feasibility on QNX 6.6;
+			\item Conception of the new Graphics Buffer Allocator;
+			\item Integration of the whole development.
+		    \end{itemize}
+		\end{itemize}
+	    \end{itemize}
+	\end{subexperience}
+    \end{experience}
+
+    \begin{experience}{January 2011}{April 2015}{Embedded software engineer Android/Linux}{Parrot}{Paris}{France}
+	\begin{itemize}[parsep=0cm,itemsep=0cm,topsep=0cm]
+	    \begin{subexperience}
+		\item \textbf {Android:}
+		    \begin{itemize}[parsep=0cm,itemsep=0cm,topsep=0cm]
+			\item Porting versions Gingerbread (2.3.7), JellyBean (4.2 \& 4.4), Lollipop (5.0) on Parrot7 SoC (C / C++):
+			    \begin{itemize}[parsep=0cm,itemsep=0cm,topsep=0cm]
+				\item Writing Hardware Abstraction Layer for different subsystems:
+				    \begin{itemize}[parsep=0cm,itemsep=0cm,topsep=0cm]
+					\item Video out (V4L2 userspace) (hwcomposer);
+					\item Video encoding / decoding (OMX);
+					\item Memory allocator (gralloc).
+				    \end{itemize}
+				\item Proposal of Parrot source code integration in Android source tree;
+				\item Patch submission to Google;
+				\item Working with providers to integrate their software (ARM / On2 / Cinemo)
+			    \end{itemize}
+			\item Framework modification and extension on Gingerbread (2.3.7) and JellyBean (4.2) (Java / C / C++):
+			    \begin{itemize}[parsep=0cm,itemsep=0cm,topsep=0cm]
+				\item Integration of Bluetooth Stack from Parrot to Android 2.3.7 at framework Level;
+				\item Design an implementation of a Radio Layer Interface to integrate messaging and telephony features to Android 2.3;
+				\item Integration of Oculus Rift (DK1 and DK2) to Android 4.2.
+			    \end{itemize}
+			\item Debugging on Cupcake (1.5), Gingerbread (2.3.7), Jellybean (4.2) and Lollipop (5.0) (Java / C / C++).
+		    \end{itemize}
+	    \end{subexperience}
+	    \begin{subexperience}
+		\item \textbf {Linux Kernel:}
+		    \begin{itemize}[parsep=0cm,itemsep=0cm,topsep=0cm]
+			\item Development:
+			    \begin{itemize}[parsep=0cm,itemsep=0cm,topsep=0cm]
+				\item Implementation of a driver to process video stream from RAM to RAM;
+				\item Back porting some drivers from Android Linux Driver to Parrot version;
+				    \begin{itemize}[parsep=0cm,itemsep=0cm,topsep=0cm]
+					\item Contiguous Memory Allocator;
+					\item Android ION;
+					\item Android synchronisation mechanism (Fences);
+					\item Modification from Samsung for V4L2 framework;
+					\item Integration of ARM Mali (GPU) driver and userspace
+				    \end{itemize}
+				\item Upgrade kernel version from 3.4 to 3.10 for Android Lollipop. This include many modifications in Parrot drivers;
+				\item Implementation of Board Support Package for some products.
+			    \end{itemize}
+			\item Debug:
+			    \begin{itemize}[parsep=0cm,itemsep=0cm,topsep=0cm]
+				\item Parrot V4L2 drivers;
+				\item HDMI out driver, support to pass the EMC certification;
+				\item ARM Mali400 driver;
+				\item Contiguous Memory Allocator;
+				\item Android ION.
+			    \end{itemize}
+		    \end{itemize}
+	    \end{subexperience}
+	\end{itemize}
+    \end{experience}
+
+    \begin{unbreakableExperience}{March 2010}{September 2010}{Internship}{Trusted Logic}{Versailles}{France}
+	\begin{subexperience}
+	    \begin{itemize}[parsep=0cm,itemsep=0cm,topsep=0cm]
+		\item Tools and Tests for a Web server embedded in a smart card. (Jython / Java / J2Me / JavaCard)
+		    \begin{itemize}[parsep=0cm,itemsep=0cm,topsep=0cm]
+			\item Writing tools in order to handle a web server located on a smart card.
+			    \begin{itemize}[parsep=0cm,itemsep=0cm,topsep=0cm]
+				\item Conception of a BIP \textless==\textgreater TCP/IP gateway in Java/J2Me ;
+				\item Implementation of a JSP like engine that generate JavaCard code;
+				\item Implementation of test applets.
+			    \end{itemize}
+		    \end{itemize}
+	    \end{itemize}
+	\end{subexperience}
+    \end{unbreakableExperience}
+
+    \begin{unbreakableExperience}{June 2009}{September 2009}{Internship}{Research lab of ESEO}{Angers}{France}
+	\begin{subexperience}
+	    \begin{itemize}[parsep=0cm,itemsep=0cm,topsep=0cm]
+		\item Study of NFC protocol. Conception of a demonstrator containing a phone and a NFC reader.
+	    \end{itemize}
+	\end{subexperience}
+    \end{unbreakableExperience}
+\end{section}
+
+\begin{unbreakableSection} {Education}
+    \begin{education}{2005}{2010}{Engineering degree in embedded software}{ESEO}{Angers}{France}
+    \end{education}
+\end{unbreakableSection}
+
+\begin{unbreakableSection} {Personal projects}
+    \begin{projects}
+	\begin{itemize}[parsep=0cm,itemsep=0cm,topsep=0cm]
+	    \item \href{https://github.com/grassead/snesemu}{Conception of a Super Nintendo emulator in C}
+	    \item \href{https://github.com/grassead/sudokusolver}{Conception of a Sudoku Solver in C++}
+	    \item \href{https://github.com/grassead/memorychecker}{Conception of a Memory Allocation checker in C}
+	\end{itemize}
+    \end{projects}
+\end{unbreakableSection}
+
+\begin{section} {Skills}
+    \begin{skills}
+	\begin{itemize}[parsep=0cm,itemsep=0cm,topsep=0cm]
+	    \item Android Porting
+	    \item Android Framework
+	    \item Android Application
+	    \item ARM Mali
+	    \item Build Root
+	    \item C/C++
+	    \item GIT
+	    \item Intel Gen 9 Graphics
+	    \item Java, J2Me, JavaCard
+	    \item Latex
+	    \item Linux Kernel Driver Development
+	    \item Linux Kernel Contiguous memory management
+	    \item OMX
+	    \item OpenGL ES
+	    \item QNX
+	    \item V4L2
+	    \item Virtualisation
+	    \item Yocto
+	\end{itemize}
+    \end{skills}
+\end{section}
+
+\begin{section} {Langages}
+    \begin{languages}
+	\begin{itemize}[parsep=0cm,itemsep=0cm,topsep=0cm]
+	    \item French: Native speaker
+	    \item English: FCE, TOEIC 865, Intermediate level
+	\end{itemize}
+    \end{languages}
+\end{section}
+
+\end{document}
+
