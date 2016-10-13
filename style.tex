@@ -48,6 +48,7 @@
     \begin {minipage}[t]{\linewidth}
 } {
     \end {minipage}
+    \smallskip
 }
 
 \renewenvironment {section}[1]
@@ -71,7 +72,6 @@
 } {
     \end {section}
     \end {samepage}
-    \smallskip
 }
 
 %[begin][end][title][company][city][country]
@@ -85,10 +85,10 @@
 \newenvironment {unbreakableExperience}[6]
 {
     \begin {samepage}
-    \experienceTitle {\date {#1 - #2:} #3 - #4 - #5, #6}
+    \begin {experience}{#1}{#2}{#3}{#4}{#5}{#6}
 } {
+    \end {experience}
     \end {samepage}
-    \smallskip
 }
 
 
@@ -104,7 +104,6 @@
     \begin {samepage}
 } {
     \end {samepage}
-    \smallskip
 }
 
 \newenvironment {skills}
@@ -112,7 +111,6 @@
     \begin {samepage}
 } {
     \end{samepage}
-    \smallskip
 }
 
 \newenvironment {languages}
@@ -120,7 +118,6 @@
     \begin {samepage}
 } {
     \end {samepage}
-    \smallskip
 }
 
 
@@ -136,7 +133,6 @@
     \begin {samepage}
 } {
     \end {samepage}
-    \smallskip
 }
 
 
