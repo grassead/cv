@@ -5,6 +5,9 @@
 \usepackage{enumitem}
 \usepackage{adjustbox}
 
+
+\usepackage{multicol}
+
 \begin{document}
 
 \input style.tex
@@ -14,11 +17,16 @@
 
 \begin {identity}
     \name {\personalFirstName}{\personalLastName}
-    \contact {\personalAddress \linebreak
-    \personalPhoneNumber, \href{mailto:\personalMail}{\personalMail}\linebreak
-    Nationality: French\linebreak
-    Github: \url{https://github.com/grassead}\linebreak
-    LinkedIn: \url{\personalLinkedin}}
+    \contact {
+		\begin{multicols}{2}
+			\personalAddress \linebreak
+			\personalPhoneNumber, \href{mailto:\personalMail}{\personalMail}\linebreak
+			\columnbreak
+			\textbf{Nationality:} French\linebreak
+			\textbf{Github:} \url{https://github.com/grassead}\linebreak
+			\textbf{LinkedIn:} \url{\personalLinkedin}
+		\end{multicols}
+    }
 \end {identity}
 
 \title {Embedded software engineer - Android / Graphics / Virtualisation}
@@ -29,8 +37,14 @@
     \begin{itemize}[parsep=0cm,itemsep=0cm,topsep=0cm]
 		\item \textbf {Software architecture:}
 		\begin{itemize}[parsep=0cm,itemsep=0cm,topsep=0cm]
-		\item Graphics and Virtualization architect for a project involving two virtual machines with display sharing.
-		\item Risk mitigation expert for a project displaying up to five video stream on an imx.6qp based board using gstreamer.
+		\item Graphics and Virtualization architect for a project involving two virtual machines with display sharing;
+		\item Risk mitigation expert for a project displaying up to five video stream on an imx.6qp based board using gstreamer;
+		\item Reworking the whole Android porting of the company;
+		\end{itemize}
+		\item \textbf {Technical Leader:}
+		\begin{itemize}[parsep=0cm,itemsep=0cm,topsep=0cm]
+		\item Writing technical answer to several calls of tenders;
+		\item Internship supervision.
 		\end{itemize}
 	\end{itemize}
 	\end{subexperience}
@@ -117,29 +131,29 @@
 	\end{itemize}
     \end{experience}
 
-    \begin{unbreakableExperience}{March 2010}{September 2010}{Internship}{Trusted Logic}{Versailles}{France}
-	\begin{subexperience}
-	    \begin{itemize}[parsep=0cm,itemsep=0cm,topsep=0cm]
-		\item Tools and Tests for a Web server embedded in a smart card. (Jython / Java / J2Me / JavaCard)
-		    \begin{itemize}[parsep=0cm,itemsep=0cm,topsep=0cm]
-			\item Writing tools in order to handle a web server located on a smart card.
-			    \begin{itemize}[parsep=0cm,itemsep=0cm,topsep=0cm]
-				\item Design of a BIP \textless==\textgreater TCP/IP gateway in Java/J2Me ;
-				\item Implementation of a JSP like engine that generate JavaCard code;
-				\item Implementation of test applets.
-			    \end{itemize}
-		    \end{itemize}
-	    \end{itemize}
-	\end{subexperience}
-    \end{unbreakableExperience}
+%    \begin{unbreakableExperience}{March 2010}{September 2010}{Internship}{Trusted Logic}{Versailles}{France}
+%	\begin{subexperience}
+%	    \begin{itemize}[parsep=0cm,itemsep=0cm,topsep=0cm]
+%		\item Tools and Tests for a Web server embedded in a smart card. (Jython / Java / J2Me / JavaCard)
+%		    \begin{itemize}[parsep=0cm,itemsep=0cm,topsep=0cm]
+%			\item Writing tools in order to handle a web server located on a smart card.
+%			    \begin{itemize}[parsep=0cm,itemsep=0cm,topsep=0cm]
+%				\item Design of a BIP \textless==\textgreater TCP/IP gateway in Java/J2Me ;
+%				\item Implementation of a JSP like engine that generate JavaCard code;
+%				\item Implementation of test applets.
+%			    \end{itemize}
+%		    \end{itemize}
+%	    \end{itemize}
+%	\end{subexperience}
+%   \end{unbreakableExperience}
 
-    \begin{unbreakableExperience}{June 2009}{September 2009}{Internship}{Research lab of ESEO}{Angers}{France}
-	\begin{subexperience}
-	    \begin{itemize}[parsep=0cm,itemsep=0cm,topsep=0cm]
-		\item Study of NFC protocol. Design of a demonstrator containing a phone and a NFC reader.
-	    \end{itemize}
-	\end{subexperience}
-    \end{unbreakableExperience}
+%    \begin{unbreakableExperience}{June 2009}{September 2009}{Internship}{Research lab of ESEO}{Angers}{France}
+%	\begin{subexperience}
+%	    \begin{itemize}[parsep=0cm,itemsep=0cm,topsep=0cm]
+%		\item Study of NFC protocol. Design of a demonstrator containing a phone and a NFC reader.
+%	    \end{itemize}
+%	\end{subexperience}
+%   \end{unbreakableExperience}
 \end{section}
 
 \begin{unbreakableSection} {Education}
@@ -164,12 +178,13 @@
 	    \item Android Porting
 	    \item Android Framework
 	    \item Android Application
-	    \item ARM Mali
+	    %\item ARM Mali
 	    \item Build Root
 	    \item C/C++
 	    \item GIT
 	    \item Intel Gen 9 Graphics
-	    \item Java, J2Me, JavaCard
+	    %\item Java, J2Me, JavaCard
+	    \item Java
 	    \item Latex
 	    \item Linux Kernel Driver Development
 	    \item Linux Kernel Contiguous memory management
