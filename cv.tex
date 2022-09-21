@@ -36,20 +36,36 @@
     \begin{experience}{September 2021}{Present}{Low Level Software Engineer}{NanoXplore SAS}{S\`{e}vres}{France}
      \begin{subexperience}
 		\begin{itemize}[parsep=0cm,itemsep=0cm,topsep=0cm]
-			\item Tools:
+			\item \textbf {Bare Metal development:}
 				\begin{itemize}[parsep=0cm,itemsep=0cm,topsep=0cm]
-					\item Writing configuration for OpenOCD for our custom SoC;
-					\item Writing scripts to program NOR Flash via OpenOCD;
+					\item Current generation of rad-hard SoC/FPGA (NG-Ultra - Quad Cortex-R52):
+					\begin{itemize}[parsep=0cm,itemsep=0cm,topsep=0cm]
+						\item Writing drivers;
+						\item Writing apps for testing purpose;
+						\item Writing helpers to ease the development.
+					\end{itemize}
+					\item Next generation of SoC/FPGA (Exceed - Cortex-M + Dual Cortex-A + Dual Cortex-R):
+					\begin{itemize}[parsep=0cm,itemsep=0cm,topsep=0cm]
+						\item Writing the build-system for the Cortex-M and Cortex-R
+						\item Writing a first version of a BSP (startup code and drivers) for the Cortex-M;
+						\item Writing boot ROM;
+						\item Testing the BSP on both ARM FVP and modelsim.
+					\end{itemize}
+				\end{itemize}
+			\item \textbf {Architecture:}
+				\begin{itemize}[parsep=0cm,itemsep=0cm,topsep=0cm]
+					\item Next generation of SoC/FPGA (Exceed - Cortex-M + Dual Cortex-A + Dual Cortex-R):
+					\begin{itemize}[parsep=0cm,itemsep=0cm,topsep=0cm]
+						\item Specifying the boot sequence;
+						\item Hardware architecture (IP choices, IP configuration, Global SoC architecture).
+					\end{itemize}
+				\end{itemize}
+			\item \textbf {Tools:}
+				\begin{itemize}[parsep=0cm,itemsep=0cm,topsep=0cm]
+					%\item Writing configuration for OpenOCD for ou SoC;
+					\item Patching OpenOCD to support our SoC;
+					\item Writing scripts to program NOR Flash and to load our FPGA via OpenOCD;
 					\item Evaluating OpenTitan for regmap generation.
-				\end{itemize}
-			\item Bare Metal development:
-				\begin{itemize}[parsep=0cm,itemsep=0cm,topsep=0cm]
-					\item Writing apps for testing purpose;
-					\item Writing helpers to ease the development.
-				\end{itemize}
-			\item Specification:
-				\begin{itemize}[parsep=0cm,itemsep=0cm,topsep=0cm]
-					\item Specifying boot sequence of a new SoC.
 				\end{itemize}
 		\end{itemize}
 	\end{subexperience}
@@ -79,7 +95,7 @@
 			\item Pre-sales for Smile ECS (About Android OS / Linux / Video);
 			\item Writing technical answer to several calls for tenders;
 			\item Helping customers to face their technical problems;
-			\item Many business trips around France;
+			%\item Many business trips around France;
 		\end{itemize}
 	\end{itemize}
 	\end{subexperience}
@@ -117,22 +133,22 @@
 		    \begin{itemize}[parsep=0cm,itemsep=0cm,topsep=0cm]
 			\item Porting versions Gingerbread (2.3.7), JellyBean (4.2 \& 4.4), Lollipop (5.0) on Parrot7 SoC (C / C++):
 			    \begin{itemize}[parsep=0cm,itemsep=0cm,topsep=0cm]
-				\item Writing Hardware Abstraction Layer for different subsystems:
-				    \begin{itemize}[parsep=0cm,itemsep=0cm,topsep=0cm]
-					\item Video out (V4L2 userspace) (hwcomposer);
-					\item Video encoding / decoding (OMX);
-					\item Memory allocator (gralloc).
-				    \end{itemize}
+				\item Writing Hardware Abstraction Layer for different subsystems;%:
+				    %\begin{itemize}[parsep=0cm,itemsep=0cm,topsep=0cm]
+					%\item Video out (V4L2 userspace) (hwcomposer);
+					%\item Video encoding / decoding (OMX);
+					%\item Memory allocator (gralloc).
+				    %\end{itemize}
 				\item Proposal of Parrot source code integration in Android source tree;
 				\item Patch submission to Google;
 				\item Working with providers to integrate their software (ARM / On2 / Cinemo)
 			    \end{itemize}
-			\item Framework modification and extension on Gingerbread (2.3.7) and JellyBean (4.2) (Java / C / C++):
-			    \begin{itemize}[parsep=0cm,itemsep=0cm,topsep=0cm]
-				\item Integration of Bluetooth Stack from Parrot to Android 2.3.7 at framework Level;
-				\item Design an implementation of a Radio Layer Interface to integrate messaging and telephony features to Android 2.3;
-				\item Integration of Oculus Rift (DK1 and DK2) to Android 4.2.
-			    \end{itemize}
+			\item Framework modification and extension on Gingerbread (2.3.7) and JellyBean (4.2) (Java / C / C++);%:
+			    %\begin{itemize}[parsep=0cm,itemsep=0cm,topsep=0cm]
+				%\item Integration of Bluetooth Stack from Parrot to Android 2.3.7 at framework Level;
+				%\item Design an implementation of a Radio Layer Interface to integrate messaging and telephony features to Android 2.3;
+				%\item Integration of Oculus Rift (DK1 and DK2) to Android 4.2.
+			    %\end{itemize}
 			\item Debugging on Cupcake (1.5), Gingerbread (2.3.7), Jellybean (4.2) and Lollipop (5.0) (Java / C / C++).
 		    \end{itemize}
 	    \end{subexperience}
@@ -143,13 +159,13 @@
 			    \begin{itemize}[parsep=0cm,itemsep=0cm,topsep=0cm]
 				\item Implementation of a driver to process video stream from RAM to RAM;
 				\item Back porting some drivers from Android Linux Driver to Parrot version;
-				    \begin{itemize}[parsep=0cm,itemsep=0cm,topsep=0cm]
-					\item Contiguous Memory Allocator;
-					\item Android ION;
-					\item Android synchronization mechanism (Fences);
-					\item Modification from Samsung for V4L2 framework;
-					\item Integration of ARM Mali (GPU) driver and userspace
-				    \end{itemize}
+				    %\begin{itemize}[parsep=0cm,itemsep=0cm,topsep=0cm]
+					%\item Contiguous Memory Allocator;
+					%\item Android ION;
+					%\item Android synchronization mechanism (Fences);
+					%\item Modification from Samsung for V4L2 framework;
+					%\item Integration of ARM Mali (GPU) driver and userspace
+				    %\end{itemize}
 				\item Upgrade kernel version from 3.4 to 3.10 for Android Lollipop. This include many modifications in Parrot drivers;
 				\item Implementation of Board Support Package for some products.
 			    \end{itemize}
@@ -201,7 +217,7 @@
 			\end{itemize}
 		\item Contribution to OpenOCD:
 			\begin{itemize}[parsep=0cm,itemsep=0cm,topsep=0cm]
-				\item \href{https://review.openocd.org/c/openocd/+/6787}{Add config file for the NXP LPC55S69 microcontroller}
+				\item \href{https://review.openocd.org/c/openocd/+/6787}{Add config file for the NXP LPC55S69 micro-controller}
 			\end{itemize}
 		\item Contribution to OpenTitan:
 			\begin{itemize}[parsep=0cm,itemsep=0cm,topsep=0cm]
@@ -218,13 +234,13 @@
     \begin{skills}
 	\begin{itemize}[parsep=0cm,itemsep=0cm,topsep=0cm]
 	    \item ARM Architecture (A/M/R)
+	    \item ARM Cortex-M23 / ARM Cortex-A53 / ARM Cortex-R52
 	    \item Android / Buildroot / Yocto
-	    \item C/C++/Java/Kotlin
-	    \item Continuous Integration
-	    \item GIT
+	    \item C / C++ / Java / Kotlin
 	    \item Linux Kernel
-	    \item Lauterbach / OpenOCD
-	    \item Virtualization
+	    \item Low level debugging: Lauterbach / OpenOCD
+	    \item Low level virtualization
+	    \item QEMU / ARM FVP
 	\end{itemize}
     \end{skills}
 \end{section}
@@ -238,7 +254,7 @@
 	    \item Capitol Du Libre: Android: Free or proprietary ?
 	    \item Android Makers 2018: Android JVM optimizations;
 	    \item Android Makers 2019: Android Sandboxing;
-	    \item Various internal events: ARM Architecture (Pauth / big.LITTLE / Virt / ISA / etc).
+	    \item Various internal events: ARM Architecture (Pauth / big.LITTLE / Virtualisation / ISA / TrustZone).
 	\end{itemize}
     \end{skills}
 \end{section}
